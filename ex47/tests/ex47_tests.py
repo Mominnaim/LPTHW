@@ -8,6 +8,7 @@ def test_room():
                 door to the north.""")
     assert_equal(gold.name, "GoldRoom")
     assert_equal(gold.paths, {})
+    funcopop("Golden")
 
 def test_room_paths():
     center = Room("Center", "Test room in the center.")
@@ -30,4 +31,8 @@ def test_map():
     assert_equal(start.go('west'), west)
     assert_equal(start.go('west').go('east'), start)
     assert_equal(start.go('down').go('up'), start)
+
+def funcopop(rooms):
+    print(rooms)
+
 
